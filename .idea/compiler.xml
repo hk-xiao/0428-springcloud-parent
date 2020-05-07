@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="0504-springcloud-provider-8083" />
+        <module name="0504-springcloud-hystrix" />
+        <module name="0504-springcloud-provider-8082" />
+        <module name="0427-springcloud-test" />
+        <module name="0427-springcloud-api" />
+        <module name="0428-eureka-7081" />
+        <module name="eureka-7083" />
+        <module name="eureka-7082" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="0427-springcloud-mapper" target="1.5" />
+      <module name="0427-springcloud-model" target="1.5" />
+      <module name="0427-springcloud-service" target="1.5" />
+      <module name="0428-eureka-7082" target="1.5" />
+      <module name="0428-eureka-7083" target="1.5" />
+      <module name="0504springcloud-provider-8083" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

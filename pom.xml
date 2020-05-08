@@ -15,6 +15,7 @@
         <module>0504springcloud-provider-8083</module>
         <module>0504-springcloud-provider-8082</module>
         <module>0504-springcloud-provider-8083</module>
+        <module>0504-springcloud-feign</module>
     </modules>
 
     <dependencyManagement>

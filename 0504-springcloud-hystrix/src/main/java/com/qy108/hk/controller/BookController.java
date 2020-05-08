@@ -1,12 +1,14 @@
 package com.qy108.hk.controller;
 
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.qy108.hk.model.Book;
 import com.qy108.hk.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,7 +37,7 @@ public class BookController {
      * @throws
     **/
     @GetMapping("/all")
-    //@HystrixCommand(fallbackMethod = "selectAllBooksFallbacl")
+    @HystrixCommand(fallbackMethod = "selectAllBooksFallbacl")
     public List<Book> selectAllBooks() throws Exception {
         List<Book> bookList = bookService.selectAllBooks();
         /*if(bookList.size() > 0) {
@@ -46,13 +48,13 @@ public class BookController {
         return bookList;
     }
 
-    /*public List<Book> selectAllBooksFallbacl() {
+    public List<Book> selectAllBooksFallbacl() {
         List<Book> bookList = new ArrayList<Book>();
         Book book = new Book();
         book.setId(100000L);
         book.setBookName("测试异常熔断");
         bookList.add(book);
         return bookList;
-    }*/
+    }
 
 }

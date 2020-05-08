@@ -7,18 +7,18 @@
     <result column="book_price" property="bookPrice" jdbcType="DOUBLE" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from bookinfo
+    delete from book
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="com.qy108.hk.model.Book" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into bookinfo (book_name, book_price)
+    insert into book (book_name, book_price)
     values (#{bookName,jdbcType=VARCHAR}, #{bookPrice,jdbcType=DOUBLE})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.qy108.hk.model.Book" >
-    update bookinfo
+    update book
     set book_name = #{bookName,jdbcType=VARCHAR},
       book_price = #{bookPrice,jdbcType=DOUBLE}
     where id = #{id,jdbcType=BIGINT}

@@ -9,12 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-/**
- * @Company AAA软件教育
- * @Author Seven Lee
- * @Date Create in 2020/5/4 14:40
- * @Description
- **/
+
 @RestController
 public class BookController {
 

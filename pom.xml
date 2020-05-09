@@ -12,10 +12,10 @@
         <module>0428-springcloud-eureka</module>
         <module>0427-springcloud-management</module>
         <module>0504-springcloud-hystrix</module>
-        <module>0504springcloud-provider-8083</module>
         <module>0504-springcloud-provider-8082</module>
         <module>0504-springcloud-provider-8083</module>
         <module>0504-springcloud-feign</module>
+        <module>0508-springcloud-zuul</module>
     </modules>
 
     <dependencyManagement>
